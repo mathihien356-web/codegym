@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành CSS Flex Grow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page">
+        <h1>CSS Flex-Grow Property</h1>
+        <p>Thuộc tính flex-grow xác định khả năng mở rộng của mỗi Flex Item.</p>
+
+        <section class="example">
+            <h2>Ví dụ: 5 Flex Item</h2>
+            <p>Item 2 có flex-grow: 1 nên nhận phần không gian còn trống.</p>
+
+            <div class="flex-container">
+                <div class="item item-1">Item 1<br>flex-grow: 0</div>
+                <div class="item item-2">Item 2<br>flex-grow: 1</div>
+                <div class="item item-3">Item 3<br>flex-grow: 0</div>
+                <div class="item item-4">Item 4<br>flex-grow: 0</div>
+                <div class="item item-5">Item 5<br>flex-grow: 0</div>
+            </div>
+        </section>
+
+        <section class="example">
+            <h2>So sánh nhiều giá trị flex-grow</h2>
+            <p>Item 1 có flex-grow: 1, Item 2 có flex-grow: 2, Item 3 có flex-grow: 1.</p>
+
+            <div class="flex-container comparison">
+                <div class="item grow-1">Item 1<br>grow: 1</div>
+                <div class="item grow-2">Item 2<br>grow: 2</div>
+                <div class="item grow-3">Item 3<br>grow: 1</div>
+            </div>
+        </section>
+
+        <section class="example">
+            <h2>Thử nghiệm tương tác</h2>
+            <p>Chọn giá trị để xem kích thước Item 2 thay đổi.</p>
+
+            <div class="controls">
+                <button onclick="setGrow(0)">flex-grow: 0</button>
+                <button onclick="setGrow(1)">flex-grow: 1</button>
+                <button onclick="setGrow(2)">flex-grow: 2</button>
+                <button onclick="setGrow(3)">flex-grow: 3</button>
+            </div>
+
+            <div class="flex-container interactive">
+                <div class="item">Item 1</div>
+                <div class="item interactive-item" id="targetItem">
+                    Item 2<br><span id="growValue">flex-grow: 1</span>
+                </div>
+                <div class="item">Item 3</div>
+                <div class="item">Item 4</div>
+                <div class="item">Item 5</div>
+            </div>
+        </section>
+
+        <section class="explanation">
+            <h2>Kết luận</h2>
+            <ul>
+                <li><strong>flex-grow: 0:</strong> Item không phát triển để nhận phần không gian dư.</li>
+                <li><strong>flex-grow: 1:</strong> Item nhận một phần không gian dư theo tỷ lệ.</li>
+                <li><strong>flex-grow: 2:</strong> Item nhận phần không gian dư theo tỷ lệ gấp đôi item có grow bằng 1, khi các điều kiện cơ bản tương đương.</li>
+            </ul>
+        </section>
+    </main>
+
+    <script>
+        function setGrow(value) {
+            document.getElementById("targetItem").style.flexGrow = value;
+            document.getElementById("growValue").textContent = "flex-grow: " + value;
+        }
+    </script>
+</body>
+</html>

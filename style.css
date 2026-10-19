@@ -1,0 +1,141 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+.page {
+    max-width: 1050px;
+    margin: 35px auto;
+    padding: 25px;
+}
+
+h1 {
+    text-align: center;
+    color: #1d4ed8;
+    margin-bottom: 8px;
+}
+
+.page > p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.example,
+.explanation {
+    background: white;
+    padding: 22px;
+    margin-bottom: 24px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.08);
+}
+
+h2 {
+    margin-top: 0;
+    color: #334155;
+}
+
+.flex-container {
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    min-height: 125px;
+    background: #e2e8f0;
+    border: 2px dashed #94a3b8;
+    border-radius: 8px;
+}
+
+.item {
+    flex-basis: 100px;
+    flex-shrink: 1;
+    flex-grow: 0;
+    min-width: 0;
+    padding: 15px 8px;
+    border-radius: 7px;
+    background: #2563eb;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-wrap: anywhere;
+}
+
+.item-2 {
+    flex-grow: 1;
+    background: #ea580c;
+}
+
+.grow-1 {
+    flex-grow: 1;
+    background: #0f766e;
+}
+
+.grow-2 {
+    flex-grow: 2;
+    background: #ea580c;
+}
+
+.grow-3 {
+    flex-grow: 1;
+    background: #7c3aed;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    background: #1d4ed8;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #1e40af;
+}
+
+.interactive-item {
+    flex-grow: 1;
+    background: #ea580c;
+}
+
+.explanation li {
+    margin-bottom: 8px;
+}
+
+@media (max-width: 600px) {
+    .page {
+        margin: 10px auto;
+        padding: 12px;
+    }
+
+    .example,
+    .explanation {
+        padding: 15px;
+    }
+
+    .flex-container {
+        gap: 5px;
+        padding: 8px;
+    }
+
+    .item {
+        flex-basis: 60px;
+        padding: 10px 3px;
+        font-size: 12px;
+    }
+}
