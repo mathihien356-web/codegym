@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành CSS Flex Wrap</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page">
+        <header class="page-header">
+            <h1>CSS Flex-Wrap Property</h1>
+            <p>Thực hành cách Flex Items xuống dòng trong Flexbox.</p>
+        </header>
+
+        <section class="controls">
+            <h2>Chọn giá trị flex-wrap</h2>
+            <div class="button-group">
+                <button type="button" data-wrap="nowrap">nowrap</button>
+                <button type="button" data-wrap="wrap" class="active">wrap</button>
+                <button type="button" data-wrap="wrap-reverse">wrap-reverse</button>
+                <button type="button" data-wrap="initial">initial</button>
+            </div>
+            <p id="description">wrap: Các phần tử tự động xuống dòng khi không đủ chỗ.</p>
+        </section>
+
+        <section class="demo-section">
+            <h2>Khu vực thực hành</h2>
+            <p class="hint">Quan sát vị trí các ô khi bạn chọn từng giá trị ở phía trên.</p>
+
+            <div class="flex-container" id="flexContainer">
+                <div class="item">Item 1</div>
+                <div class="item">Item 2</div>
+                <div class="item">Item 3</div>
+                <div class="item">Item 4</div>
+                <div class="item">Item 5</div>
+                <div class="item">Item 6</div>
+            </div>
+        </section>
+
+        <section class="summary">
+            <h2>Tóm tắt</h2>
+            <ul>
+                <li><strong>nowrap:</strong> Giữ các phần tử trên một dòng.</li>
+                <li><strong>wrap:</strong> Cho phép các phần tử xuống dòng.</li>
+                <li><strong>wrap-reverse:</strong> Xuống dòng theo hướng trục phụ ngược lại.</li>
+                <li><strong>initial:</strong> Đưa thuộc tính về giá trị mặc định nowrap.</li>
+            </ul>
+        </section>
+
+        <footer class="footer">
+            Bài thực hành CSS Flexbox
+        </footer>
+    </main>
+
+    <script>
+        const container = document.getElementById("flexContainer");
+        const buttons = document.querySelectorAll("[data-wrap]");
+        const description = document.getElementById("description");
+
+        const descriptions = {
+            "nowrap": "nowrap: Các phần tử nằm trên một dòng, có thể bị tràn khỏi vùng chứa.",
+            "wrap": "wrap: Các phần tử tự động xuống dòng khi không đủ chỗ.",
+            "wrap-reverse": "wrap-reverse: Các dòng được xếp theo hướng ngược lại của trục phụ.",
+            "initial": "initial: Đặt flex-wrap về giá trị mặc định nowrap."
+        };
+
+        buttons.forEach(function(button) {
+            button.addEventListener("click", function() {
+                const value = button.dataset.wrap;
+                container.style.flexWrap = value;
+                description.textContent = descriptions[value];
+
+                buttons.forEach(function(item) {
+                    item.classList.remove("active");
+                });
+
+                button.classList.add("active");
+            });
+        });
+    </script>
+</body>
+</html>
