@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Flexbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Responsive Flexbox</h1>
+            <p>Thiết kế giao diện cho mọi thiết bị</p>
+        </header>
+
+        <nav class="nav">
+            <a href="#home">Trang chủ</a>
+            <a href="#news">Tin tức</a>
+            <a href="#about">Giới thiệu</a>
+            <a href="#contact">Liên hệ</a>
+        </nav>
+
+        <div class="main-container" id="home">
+            <main class="content">
+                <h2>Nội dung chính</h2>
+                <p class="description">
+                    CSS Flexbox giúp xây dựng bố cục linh hoạt, dễ căn chỉnh
+                    và thích ứng với kích thước màn hình.
+                </p>
+
+                <div class="article" id="news">
+                    <h3>Bài viết 1: Tìm hiểu Flexbox</h3>
+                    <p>Flexbox hỗ trợ sắp xếp các phần tử theo hàng hoặc cột,
+                    điều chỉnh khoảng cách và phân chia không gian.</p>
+                </div>
+
+                <div class="article">
+                    <h3>Bài viết 2: Thiết kế responsive</h3>
+                    <p>Media Queries cho phép thay đổi bố cục theo chiều rộng
+                    màn hình để website hiển thị tốt trên điện thoại.</p>
+                </div>
+
+                <div class="article" id="about">
+                    <h3>Bài viết 3: Thực hành CSS</h3>
+                    <p>Kết hợp HTML và CSS để tạo trang web có cấu trúc rõ ràng,
+                    dễ sử dụng và dễ bảo trì.</p>
+                </div>
+            </main>
+
+            <aside class="sidebar">
+                <h2>Sidebar</h2>
+
+                <div class="side-card">
+                    <h3>Tin mới</h3>
+                    <p>Cập nhật kiến thức lập trình web.</p>
+                </div>
+
+                <div class="side-card">
+                    <h3>Bài viết nổi bật</h3>
+                    <p>Những kiến thức CSS cần ghi nhớ.</p>
+                </div>
+
+                <div class="side-card">
+                    <h3>Thông báo</h3>
+                    <p>Hoàn thành bài tập và nộp mã nguồn lên GitHub.</p>
+                </div>
+            </aside>
+        </div>
+
+        <footer class="footer" id="contact">
+            <p>Responsive Flexbox Layout</p>
+            <p>© 2026 - Thực hành HTML và CSS</p>
+        </footer>
+    </div>
+</body>
+</html>
