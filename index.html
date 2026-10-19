@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bố cục Responsive bằng CSS Grid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>My Website</h1>
+            <p>Khám phá kiến thức và công nghệ</p>
+        </header>
+
+        <nav class="navigation">
+            <a href="#home">Trang chủ</a>
+            <a href="#news">Tin tức</a>
+            <a href="#technology">Công nghệ</a>
+            <a href="#contact">Liên hệ</a>
+        </nav>
+
+        <main class="main-content" id="home">
+            <section class="intro">
+                <h2>Nội dung chính</h2>
+                <p>
+                    CSS Grid giúp xây dựng bố cục trang web theo hàng và cột.
+                    Kết hợp với Media Queries, giao diện có thể tự điều chỉnh
+                    để phù hợp với nhiều kích thước màn hình.
+                </p>
+            </section>
+
+            <section class="article-list" id="news">
+                <article class="article">
+                    <h3>Thiết kế web hiện đại</h3>
+                    <p>
+                        Tìm hiểu cách xây dựng giao diện rõ ràng,
+                        dễ sử dụng và phù hợp với người dùng.
+                    </p>
+                </article>
+
+                <article class="article" id="technology">
+                    <h3>Khám phá CSS Grid</h3>
+                    <p>
+                        Sử dụng grid-template-areas để xác định vị trí
+                        các khu vực trong bố cục trang web.
+                    </p>
+                </article>
+
+                <article class="article">
+                    <h3>Responsive Design</h3>
+                    <p>
+                        Thiết kế responsive giúp website hiển thị tốt
+                        trên máy tính bảng và điện thoại.
+                    </p>
+                </article>
+            </section>
+        </main>
+
+        <aside class="sidebar">
+            <section class="sidebar-section">
+                <h2>Tin nổi bật</h2>
+                <p>Những xu hướng thiết kế web mới nhất.</p>
+            </section>
+
+            <section class="sidebar-section">
+                <h2>Bài viết phổ biến</h2>
+                <ul>
+                    <li>HTML cơ bản</li>
+                    <li>CSS Flexbox</li>
+                    <li>CSS Grid</li>
+                    <li>Responsive Design</li>
+                </ul>
+            </section>
+        </aside>
+
+        <footer class="footer" id="contact">
+            <p>Thực hành CSS Grid Responsive</p>
+            <p>Thiết kế giao diện cho Desktop và Mobile</p>
+        </footer>
+    </div>
+</body>
+</html>
